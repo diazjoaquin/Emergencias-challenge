@@ -24,7 +24,7 @@ model Person {
 
 model PhoneType {
   id       Int     @id @default(autoincrement())
-  typeName String
+  typeName String  @unique
   phones   Phone[]
 }
 
