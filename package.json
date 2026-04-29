@@ -19,6 +19,9 @@
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage"
   },
+  "prisma": {
+    "seed": "node --loader ts-node/esm prisma/seed.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -45,6 +48,7 @@
     "prettier": "^3.8.3",
     "prisma": "^7.8.0",
     "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
     "typescript": "^6.0.3",
     "vitest": "^4.1.5"
   }
