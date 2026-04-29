@@ -47,11 +47,17 @@ model Address {
   person   Person @relation(fields: [personId], references: [id], onDelete: Cascade)
 }
 
+enum ActivityType {
+  call
+  meeting
+  email
+}
+
 model ContactActivity {
-  id           Int      @id @default(autoincrement())
+  id           Int          @id @default(autoincrement())
   personId     Int
-  activityType String
+  activityType ActivityType
   activityDate String
   description  String?
-  person       Person   @relation(fields: [personId], references: [id], onDelete: Cascade)
+  person       Person       @relation(fields: [personId], references: [id], onDelete: Cascade)
 }
